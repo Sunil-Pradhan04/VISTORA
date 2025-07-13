@@ -17,6 +17,7 @@ const Login = () => {
     if (name && pass) {
       if (name === userName && pass=== userPass) {
         localStorage.setItem("login", "yes");
+        window.location.reload();
         window.location.href = "/VISTORA/#/home";
       }
       else{
