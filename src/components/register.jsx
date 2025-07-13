@@ -7,7 +7,7 @@ const Register = () => {
   const emailRef = useRef(null);
   const passRef = useRef(null);
   const arr = ['avatar1.jpg', 'avater2.webp', 'avatar3.jpeg', 'avatar4.jpeg'];
-
+  const navigation = useNavigate();
   const submit = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
@@ -31,7 +31,8 @@ const Register = () => {
   };
   const FinalSubmit = () => {
     localStorage.setItem('logo' , link);
-    window.location.href = "/home";
+    window.location.href = "/VISTORA/#/home";
+    // navigation('/home');
   };
   return (
     <div className="login">

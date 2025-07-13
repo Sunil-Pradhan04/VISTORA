@@ -18,7 +18,7 @@ const Profile = () => {
   const logout = () => {
     if (window.confirm("Do you really want to logout?")) {
       localStorage.setItem("login", "no");
-      window.location.href = "/login";
+      window.location.href = "/VISTORA/#/login";
     }
   };
 
