@@ -1,0 +1,10 @@
+.related{
+  height: 200px;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .related {
+    height: auto;
+    width: 100%;
+  }
+}

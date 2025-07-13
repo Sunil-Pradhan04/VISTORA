@@ -1,0 +1,82 @@
+.aa{
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  z-index: 1;
+}
+.short-video{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #0f0f0f;
+}
+.aa::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+.aa::-webkit-media-controls-play-button,
+.aa::-webkit-media-controls-volume-slider,
+.aa::-webkit-media-controls-mute-button,
+.aa::-webkit-media-controls-fullscreen-button,
+.aa::-webkit-media-controls-timeline-container,
+.aa::-webkit-media-controls-current-time-display,
+.aa::-webkit-media-controls-time-remaining-display,
+.aa::-webkit-media-controls-seek-back-button,
+.aa::-webkit-media-controls-seek-forward-button,
+.aa::-webkit-media-controls-download-button,
+.aa::-webkit-media-controls-picture-in-picture-button {
+  display: none !important;
+}
+
+/* Keep only timeline/progress bar */
+.aa::-webkit-media-controls-timeline {
+  display: block !important;
+}
+.side{
+  position: absolute;
+  right: 10px;
+  height: 310px;
+  bottom: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+.video-resonse{
+  color: white;
+  font-size: 27px;
+  /* font-weight: bold; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.des{
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.dislike{
+  transform: rotate(180deg);
+}
+.video-resonse:active{
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+
+.description{
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  width: 94%;
+  overflow: hidden;
+  margin: 3%;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}

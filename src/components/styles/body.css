@@ -1,0 +1,18 @@
+.body {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  background-color: black;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 745px) {
+  .body {
+    width: 100%;
+    /* flex: 1; */
+    height: 100%;
+    padding: 0px;
+  }
+}

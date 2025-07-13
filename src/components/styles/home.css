@@ -1,0 +1,36 @@
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.more{
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.more2{
+  color: white;
+  height: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.text{
+  height: auto;
+  width: 94%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0px 2%;
+  font-size: 13px;
+}

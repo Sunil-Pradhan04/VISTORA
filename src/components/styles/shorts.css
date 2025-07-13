@@ -1,0 +1,16 @@
+.shorts{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.short-feed{
+  height: 100%;
+  width: 400px;
+  overflow-y: auto;
+  /* background-color: red; */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}

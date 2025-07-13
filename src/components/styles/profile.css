@@ -1,0 +1,244 @@
+.profile {
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.edit-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.choose-avatar {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.logos-container {
+  width: 100%;
+  overflow-x: auto;
+  height: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  scrollbar-width: none;
+}
+
+.logos {
+  display: flex;
+  gap: 10px;
+  padding: 0 10px;
+  min-width: max-content;
+  width: auto;
+  
+
+}
+
+.pre-logo {
+  height: 60px;
+  width: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.pre-logo:hover {
+  border-color: white;
+  transform: scale(1.1);
+}
+
+.active3 {
+  border: 3px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+  transform: scale(1.1);
+}
+
+.edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.edit-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.edit-input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.save-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 100px;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.save-button:hover, .cancel-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px white;
+}
+
+/* Existing styles remain the same */
+.logo {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 10px white;
+  animation: logo 2s ease-in-out infinite;
+}
+
+@keyframes logo {
+  0% {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 20px white;
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgb(10, 235, 235);
+  }
+  100% {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 20px white;
+  }
+}
+
+.edit {
+  height: 35px;
+  width: 70px;
+  background: linear-gradient(110deg, rgb(255, 179, 0), rgb(255, 25, 0));
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px white;
+}
+
+.user-name {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.user-email {
+  color: white;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.exit {
+  height: 40px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  border-radius: 7px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.exit:hover {
+  box-shadow: 0px 0px 20px white;
+}
+
+@media (max-width: 500px) {
+  .profile {
+    padding: 15px;
+  }
+  
+  .pre-logo {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+  }
+  
+  .edit-input {
+    padding: 10px;
+  }
+  
+  .save-button, .cancel-button {
+    padding: 8px 15px;
+    min-width: 80px;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+}
