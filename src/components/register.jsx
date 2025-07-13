@@ -31,7 +31,7 @@ const Register = () => {
   };
   const FinalSubmit = () => {
     localStorage.setItem('logo' , link);
-    window.location.href = "/home";
+    window.location.href = "/VISTORA/#/home";
   };
   return (
     <div className="login">
