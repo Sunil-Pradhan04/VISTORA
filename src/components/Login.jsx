@@ -1,15 +1,16 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./styles/login.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Login = () => {
   const nameRef = useRef(null);
   const passRef = useRef(null);
 
+  const navigate = useNavigate();
   const userName = localStorage.getItem("userName");
   const userPass = localStorage.getItem("userPass");
 
-  const login = localStorage.getItem('login');
+  let login = localStorage.getItem('login');
 
   const submit = () => {
     const name = nameRef.current.value;
@@ -17,8 +18,9 @@ const Login = () => {
     if (name && pass) {
       if (name === userName && pass=== userPass) {
         localStorage.setItem("login", "yes");
-        window.location.reload();
+        login = localStorage.getItem('login')
         window.location.href = "/VISTORA/#/home";
+        // navigate('/home')
       }
       else{
         alert("Invalide Username or Password");
