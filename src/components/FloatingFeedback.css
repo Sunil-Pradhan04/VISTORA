@@ -1,0 +1,40 @@
+.floating-feedback-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.floating-feedback-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+  color: white;
+  text-decoration: none;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback-icon {
+  font-size: 20px;
+}
+
+.feedback-text {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}

@@ -29,7 +29,7 @@ const Login = () => {
       alert("Please enter a valid email address.");
       return;
     }
-
+    //https://event-management-backend-self.vercel.app
     setLoading(true);
     try {
       const response = await fetch("https://event-management-backend-self.vercel.app/api/EVENT/visitor", {

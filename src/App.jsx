@@ -11,6 +11,8 @@ import Shorts from "./components/shorts";
 import Search from "./components/search";
 import Photos from "./components/photos";
 import Profile from "./components/profile";
+import FeedbackPage from "./components/FeedbackPage";
+import FloatingFeedback from "./components/FloatingFeedback";
 import './components/styles/body.css'
 
 const App = () => {
@@ -30,9 +32,11 @@ const App = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
       </Routes> 
     </div>
       </div>
+      <FloatingFeedback />
      </div>
     </PostListProvider>
   );
