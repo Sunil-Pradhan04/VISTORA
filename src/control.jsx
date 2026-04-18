@@ -1,15 +1,14 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import App from './App';
 import Login from './components/Login';
-import Register from './components/Register';
 import { useEffect, useState } from 'react';
 
 const Control = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('login') === 'yes');
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('login') === 'true');
   const location = useLocation();
 
   useEffect(() => {
-    const loginStatus = localStorage.getItem('login') === 'yes';
+    const loginStatus = localStorage.getItem('login') === 'true';
     setIsLoggedIn(loginStatus);
   }, [location]); // This re-checks login status whenever the route changes
 
@@ -20,7 +19,6 @@ const Control = () => {
         element={isLoggedIn ? <App /> : <Navigate to="/login" replace />}
       />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
     </Routes>
   );
 };

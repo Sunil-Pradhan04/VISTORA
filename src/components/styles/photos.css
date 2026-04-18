@@ -65,6 +65,10 @@
   color: white;
   text-decoration: none;
   border: none;
+  transition: all 0.4s ease;
+}
+.button:active{
+  transform: scale(0.9);
 }
 .image-div2:hover .overlay {
   background-color: rgba(0, 0, 0, 0.7);

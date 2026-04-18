@@ -269,7 +269,7 @@ const PostListProvider = ({ children }) => {
       return data.hits;
     } catch (error) {
       if (error.message === "Failed to fetch") {
-        console.log ("Network Connection Error");
+        console.log("Network Connection Error");
         return [];
       } else {
         alert("Error fetching shorts:", error);
@@ -279,18 +279,17 @@ const PostListProvider = ({ children }) => {
 
   const useShorts = async () => {
     const data = await fetchShorts();
-    if(data.length !== 0){
-    const newData = [...shortsCustom, ...data];
-    setShorts(newData);
-    setShortsCustom(newData);
-    setShortPage(shortPage + 1);
-    }
-    else{
+    if (data.length !== 0) {
+      const newData = [...shortsCustom, ...data];
+      setShorts(newData);
+      setShortsCustom(newData);
+      setShortPage(shortPage + 1);
+    } else {
       alert("Check Network");
     }
   };
 
-  const [preQ , setPreQ] = useState(null);
+  const [preQ, setPreQ] = useState(null);
   const Search = async (query) => {
     setLoder(true);
     try {
@@ -303,12 +302,11 @@ const PostListProvider = ({ children }) => {
       const data = await response.json();
       return data.hits;
     } catch (error) {
-      if(error.message === 'Failed to fetch'){
-        alert("You're offline")
+      if (error.message === "Failed to fetch") {
+        alert("You're offline");
         return [];
-      }
-      else{
-      alert("Error during search:", error);
+      } else {
+        alert("Error during search:", error);
       }
     } finally {
       setLoder(false);
@@ -317,16 +315,14 @@ const PostListProvider = ({ children }) => {
 
   const fetchSearch = async (query) => {
     const response = await Search(query);
-    console.log(query)
-      if(preQ === query){
-    setSearch((pre) => [...pre, ...response]);
-    setSearchPage(searchPage + 1);
-      }
-      else{
-        setSearch(response);
-      }
-      setPreQ(query);
-    
+    console.log(query);
+    if (preQ === query) {
+      setSearch((pre) => [...pre, ...response]);
+      setSearchPage(searchPage + 1);
+    } else {
+      setSearch(response);
+    }
+    setPreQ(query);
   };
 
   const [searchQ, setSearchQ] = useState(null);
@@ -349,8 +345,8 @@ const PostListProvider = ({ children }) => {
       }
       setSearchQ(searchData);
     } catch (error) {
-      if(error.message === 'Failed to fetch'){
-        alert("You're offline")
+      if (error.message === "Failed to fetch") {
+        alert("You're offline");
       }
       console.log("Error", error);
     }
